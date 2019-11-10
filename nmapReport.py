@@ -153,7 +153,7 @@ if __name__ == '__main__':
         elif os.path.isdir(tmp_path):
             for file_path in os.listdir(tmp_path):
                 if file_path.endswith('.xml'):
-                    xml_reports.append(tmp_path + file_path)
+                    xml_reports.append(os.path.join(tmp_path, file_path))
         else:
             parser.print_help()
             print(f'\n[!] "{tmp_path}" not a file or a directory.')
